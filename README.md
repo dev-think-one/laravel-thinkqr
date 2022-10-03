@@ -3,9 +3,9 @@
 ![Packagist License](https://img.shields.io/packagist/l/yaroslawww/laravel-thinkqr?color=%234dc71f)
 [![Packagist Version](https://img.shields.io/packagist/v/yaroslawww/laravel-thinkqr)](https://packagist.org/packages/yaroslawww/laravel-thinkqr)
 [![Total Downloads](https://img.shields.io/packagist/dt/yaroslawww/laravel-thinkqr)](https://packagist.org/packages/yaroslawww/laravel-thinkqr)
-[![Build Status](https://scrutinizer-ci.com/g/yaroslawww/laravel-thinkqr/badges/build.png?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-thinkqr/build-status/master)
-[![Code Coverage](https://scrutinizer-ci.com/g/yaroslawww/laravel-thinkqr/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-thinkqr/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/yaroslawww/laravel-thinkqr/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-thinkqr/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/yaroslawww/laravel-thinkqr/badges/build.png?b=main)](https://scrutinizer-ci.com/g/yaroslawww/laravel-thinkqr/build-status/main)
+[![Code Coverage](https://scrutinizer-ci.com/g/yaroslawww/laravel-thinkqr/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/yaroslawww/laravel-thinkqr/?branch=main)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/yaroslawww/laravel-thinkqr/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/yaroslawww/laravel-thinkqr/?branch=main)
 
 Wrapper for qrcode functionality.
 
