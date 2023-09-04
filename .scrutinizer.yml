@@ -5,6 +5,9 @@ build:
   nodes:
     analysis:
       image: default-bionic
+      dependencies:
+        before:
+          - sudo apt install imagemagick imagemagick-doc
       environment:
         php:
           version: 8.0
@@ -13,9 +16,6 @@ build:
             memory_limit: "-1"
           pecl_extensions:
             - imagick
-      dependencies:
-        before:
-          - sudo apt-get install -y libmagickwand-dev libmagickcore-dev
       tests:
         override:
           - command: vendor/bin/phpunit --coverage-clover=coverage-file
