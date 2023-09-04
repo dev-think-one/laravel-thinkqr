@@ -8,8 +8,8 @@ build:
       dependencies:
         before:
           - sudo apt-get -y install libmagickwand-dev libmagickcore-dev
-          - printf "\n" | pecl install imagick
-          - sed -i 's/extension="imagick.so"//g' `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
+          - pecl install imagick
+          - docker-php-ext-enable imagick
       environment:
         php:
           version: 8.0
