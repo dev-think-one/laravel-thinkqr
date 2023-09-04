@@ -2,7 +2,8 @@ build
 composer.lock
 docs
 vendor
-coverage
+/coverage
+/.phpunit.cache
 .phpunit.result.cache
 .idea
 .php-cs-fixer.cache

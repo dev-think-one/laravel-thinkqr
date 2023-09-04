@@ -4,7 +4,7 @@ namespace ThinkQR\Tests;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
-    protected function getPackageProviders($app)
+    protected function getPackageProviders($app): array
     {
         return [
             \ThinkQR\ServiceProvider::class,
@@ -18,7 +18,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
      *
      * @return void
      */
-    protected function getEnvironmentSetUp($app)
+    protected function getEnvironmentSetUp($app): void
     {
         $app['config']->set('database.default', 'testbench');
         $app['config']->set('database.connections.testbench', [
@@ -27,6 +27,6 @@ class TestCase extends \Orchestra\Testbench\TestCase
             'prefix'   => '',
         ]);
 
-        // $app['config']->set('iprosoftware-sync.some_key', 'some_value');
+        // $app['config']->set('thinkqr.some_key', 'some_value');
     }
 }

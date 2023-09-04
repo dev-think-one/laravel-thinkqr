@@ -16,7 +16,7 @@ class QrCodeImageForPdf
         static::convertImageTo8bit($this->tmpFileName);
     }
 
-    public static function make(...$arguments)
+    public static function make(...$arguments): static
     {
         return new static(...$arguments);
     }

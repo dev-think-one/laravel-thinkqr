@@ -19,14 +19,21 @@ class QRCode
     protected float $margin;
 
     /**
-     * @param  string  $content
-     * @param  array  $options
+     * @param string $content
+     * @param array $options
      */
     public function __construct(string $content, array $options = [])
     {
-        $this->content    = $content;
-        $this->renderSize = $options['render_size'] ?? config('thinkqr.defaults.render_size');
-        $this->margin     = $options['margin']      ?? config('thinkqr.defaults.margin');
+        $this->content = $content;
+        $this->renderSize(
+            $options['render_size'] ?? config('thinkqr.defaults.render_size'),
+            $options['margin']      ?? config('thinkqr.defaults.margin')
+        );
+    }
+
+    public static function make(...$arguments): static
+    {
+        return new static(...$arguments);
     }
 
     protected function prepareWriter(?ImageBackEndInterface $imageBackEnd = null): Writer
@@ -39,15 +46,23 @@ class QRCode
         return new Writer($renderer);
     }
 
-    public function content(string $content): self
+    public function content(string $content): static
     {
         $this->content = $content;
 
         return $this;
     }
 
-    public function renderSize(float $renderSize, ?float $margin = null): self
+    public function getContent(): string
     {
+        return $this->content ;
+    }
+
+    public function renderSize(float $renderSize = 1, ?float $margin = null): static
+    {
+        if ($renderSize < 1 || $renderSize > 999999) {
+            throw new \InvalidArgumentException('Render size should be between 1-999999px');
+        }
         $this->renderSize = $renderSize;
 
         if (!is_null($margin)) {
@@ -57,8 +72,12 @@ class QRCode
         return $this;
     }
 
-    public function margin(float $margin): self
+    public function margin(float $margin = 0): static
     {
+        if ($margin < 0 || $margin > 999999) {
+            throw new \InvalidArgumentException('Margin should be between 0-999999px');
+        }
+
         $this->margin = $margin;
 
         return $this;
