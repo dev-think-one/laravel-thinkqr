@@ -7,7 +7,7 @@ build:
       image: default-bionic
       dependencies:
         before:
-          - sudo apt update && sudo apt install -y php-imagick imagick
+          - sudo apt update && sudo apt install -y php-imagick libmagickwand-dev
       environment:
         php:
           version: 8.0
