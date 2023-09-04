@@ -7,15 +7,13 @@ build:
       image: default-bionic
       dependencies:
         before:
-          - sudo apt install imagemagick imagemagick-doc
+          - sudo apt install -y php-imagick imagick
       environment:
         php:
           version: 8.0
           ini:
             "xdebug.mode": coverage,
             memory_limit: "-1"
-          pecl_extensions:
-            - imagick
       tests:
         override:
           - command: vendor/bin/phpunit --coverage-clover=coverage-file
