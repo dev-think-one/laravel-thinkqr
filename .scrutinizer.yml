@@ -9,7 +9,7 @@ build:
         before:
           - sudo apt-get -y install libmagickwand-dev libmagickcore-dev
           - printf "\n" | pecl install imagick
-          - docker-php-ext-enable imagick
+          - sed -i 's/extension="imagick.so"//g' `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
       environment:
         php:
           version: 8.0
