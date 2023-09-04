@@ -11,6 +11,8 @@ build:
           ini:
             "xdebug.mode": coverage,
             memory_limit: "-1"
+          pecl_extensions:
+            - imagick
       tests:
         override:
           - command: vendor/bin/phpunit --coverage-clover=coverage-file
