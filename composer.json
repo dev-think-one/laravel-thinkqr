@@ -5,12 +5,12 @@
         "laravel",
         "qrcode"
     ],
-    "homepage": "https://github.com/yaroslawww/laravel-thinkqr",
+    "homepage": "https://github.com/dev-think-one/laravel-thinkqr",
     "license": "MIT",
     "authors": [
         {
             "name": "Yaroslav Georgitsa",
-            "email": "yaroslav.georgitsa@gmail.com",
+            "email": "yg@think.studio",
             "homepage": "https://github.com/yaroslawww",
             "role": "Developer"
         }
